@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +20,7 @@ public class MysizeFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup root = (RecyclerView.ViewHolder)inflater.inflate(R.layout.fragment_mysize,null);
+        ViewGroup root = (ViewGroup)inflater.inflate(R.layout.fragment_mysize,null);
         return root;
     }
 
@@ -38,14 +37,14 @@ public class MysizeFragment extends Fragment {
         }
 
         EditText edText2 = (EditText)getView().findViewById(R.id.editText2);
-        if(sleeve !=0){edText2.setText(Integer.toString(neck));
+        if(sleeve !=0){edText2.setText(Integer.toString(sleeve));
         }
 
         EditText edText3 = (EditText)getView().findViewById(R.id.editText3);
-        if(waist !=0){edText3.setText(Integer.toString(neck));
+        if(waist !=0){edText3.setText(Integer.toString(waist));
         }
         EditText edText4 = (EditText)getView().findViewById(R.id.editText4);
-        if(insideLeg !=0){edText4.setText(Integer.toString(neck));}
+        if(insideLeg !=0){edText4.setText(Integer.toString(insideLeg));}
 
     }
 
